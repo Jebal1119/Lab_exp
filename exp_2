@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idea Submission Form</title>
+</head>
+<style>
+     body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .gender {
+      margin-top: 10px;
+      display: inline-block;
+      font-weight: bold;
+    }
+    .gender label {
+      display: inline-block;
+      font-weight: normal;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    h2{
+        text-align: center;
+        color: rgb(2, 119, 119);
+
+    }
+    h4{
+        text-align: center;
+        color: rgb(31, 107, 107);
+
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input{
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    input[type="submit"] {
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <h2> Startup Idea Submission Form </h2>
+        <h4>For Incubation Program</h4>
+        <form action="/submit" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+      
+            <label for="studentId">Student ID</label>
+            <input type="text" id="studentId" name="studentId" required>
+      
+            <label for="department">Department</label>
+            <select id="department" name="department" required>
+              <option value="">-- Select Department --</option>
+              <option value="CSE">CSE</option>
+              <option value="ECE">ECE</option>
+              <option value="EEE">EEE</option>
+              <option value="ME">Mechanical</option>
+              <option value="CE">Civil</option>
+            </select>
+      
+            <label for="semester">Semester</label>
+            <select id="semester" name="semester" required>
+              <option value="">-- Select Semester --</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select>
+      
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+      
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+      
+            <div class="gender">
+              <label>Gender</label>
+              <label><input type="radio" name="gender" value="Male" required> Male</label>
+              <label><input type="radio" name="gender" value="Female"> Female</label>
+              <label><input type="radio" name="gender" value="Other"> Other</label>
+            </div><br>
+        
+            
+            <label>LinkedIn Profile</label>
+          <input type="url" name="linkedin">
+
+          <label>Startup Name</label>
+          <input type="text" name="startup_name">
+
+          <label>Tagline</label>
+          <input type="text" name="tagline">
+
+          <label>Problem Statement</label>
+          <textarea name="problem" rows="3" required></textarea>
+
+          <label>Proposed Solution</label>
+          <textarea name="solution" rows="3" required></textarea>
+
+          <label>Target Market</label>
+          <textarea name="market" rows="3"></textarea>
+
+          <label>Revenue/Business Model</label>
+          <textarea name="business_model" rows="3"></textarea>
+
+          <label>Development Stage</label>
+          <select name="stage">
+            <option value="idea">Idea</option>
+            <option value="prototype">Prototype</option>
+            <option value="mvp">MVP</option>
+            <option value="launched">Launched</option>
+          </select>
+
+          <label>What support do you need from the incubator?</label>
+          <textarea name="support" rows="3"></textarea>
+
+          <label>Pitch Deck (PDF Link)</label>
+          <input type="url" name="pitchdeck">
+
+          <label>Declaration</label>
+          <input type="checkbox" name="declaration" required>
+          I declare this idea is original and does not infringe any IP.
+
+          <input type="submit" value="Submit Idea">
+    </div>
+   
+    
+</body>
+</html>
